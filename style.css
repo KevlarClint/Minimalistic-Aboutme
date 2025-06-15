@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 3px solid blueviolet; */
 }
 :root {
   --open-sans-font: "Open Sans", sans-serif;
@@ -44,10 +45,16 @@ main {
   font-weight: bold;
 }
 .name-title {
-  font-size: 4rem;
+  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 1.3599999999999999rem + 2.2vw, 4rem);
   white-space: nowrap;
   font-weight: bold;
   line-height: 4.5rem;
+
+  @media (width <= 466px) {
+    text-align: center;
+    line-height: 2.5rem;
+  }
 
   p:nth-child(2) {
     background: linear-gradient(90deg, #00c9ff, #92fe9d);
@@ -57,7 +64,12 @@ main {
 }
 .social-media-link {
   display: flex;
+  flex-wrap: nowrap;
   gap: 20px;
+
+  @media (width <= 375px) {
+    gap: 10px;
+  }
 
   /* a */
   & .box-link {
@@ -67,12 +79,21 @@ main {
     gap: 10px;
     border-radius: 25px;
     height: 50px;
-    width: 150px;
+    width: 95%;
+    max-width: 150px;
     background-color: var(--box-gray);
     color: rgb(255, 255, 255);
     text-decoration: none;
     box-shadow: var(--main-box-shadow);
     transition: ease-in-out 0.3s;
+    flex-wrap: nowrap;
+    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 0.76rem + 0.19999999999999996vw, 1rem);
+
+    @media (width <= 375px) {
+      height: 40px;
+      gap: 7px;
+    }
 
     &:hover {
       transform: translateY(-5px);
@@ -85,7 +106,8 @@ main {
 
 .about-me {
   margin: 5px;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.92rem + 0.3999999999999999vw, 1.4rem);
   padding-bottom: 20px;
   color: var(--gray-text);
   text-shadow: var(--main-text-shadow);
@@ -99,6 +121,10 @@ main {
   h2 {
     font-size: 1.8rem;
     margin-bottom: 30px;
+
+    @media (width <= 466px) {
+      text-align: center;
+    }
   }
 
   .timeline {
@@ -126,9 +152,10 @@ main {
 
       .timeline-content {
         padding-left: 10px;
+        font-size: 1.2rem;
 
         .timeline-date {
-          font-size: 14px;
+          font-size: 1.1rem;
           color: #aaa;
           display: block;
           margin-bottom: 5px;
@@ -152,12 +179,21 @@ main {
   & h2 {
     font-size: 1.8rem;
     margin-bottom: 30px;
+
+    @media (width <= 466px) {
+      text-align: center;
+    }
   }
 
   & .container-pro {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+
+    @media (width <= 466px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     & .projects-box {
       padding: 20px;
@@ -196,15 +232,28 @@ main {
   & h2 {
     font-size: 1.8rem;
     margin-bottom: 30px;
+
+    @media (width <= 466px) {
+      text-align: center;
+    }
   }
   & .container-skills {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
+    @media (width <= 465px) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+    @media (width <= 320px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     & .skills-box {
       width: 100%;
-      max-width: 200px;
       height: 200px;
       border-radius: 10px;
       display: flex;
@@ -234,6 +283,10 @@ footer {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 2px solid var(--gray-text);
+
+  @media (width <= 466px) {
+    align-items: center;
+  }
 
   & p {
     font-size: 1.5rem;
