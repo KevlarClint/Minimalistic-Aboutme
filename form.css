@@ -56,7 +56,7 @@ body {
   --text-color: white;
   --bgc: url("assets/grid-blue.jpg");
   --bgc-dark: url(assets/grid-blue.jpg);
-  --fourth-box: rgb(45, 47, 51);
+  --fourth-box: rgba(45, 47, 51, 0.452);
   --main-color: black;
 }
 
