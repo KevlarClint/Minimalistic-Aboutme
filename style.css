@@ -25,14 +25,23 @@ body {
   background-color: #121212;
   background-image: radial-gradient(#444 1px, transparent 1px);
   background-size: 30px 30px; /* spacing between dots */
-  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: var(--open-sans-font);
   color: white;
+  animation: moveBg 200s linear infinite;
 }
+@keyframes moveBg {
+  0% {
+    background-position: 0% 0%;
+  }
 
+  100% {
+    background-position: 100% 100%;
+  }
+}
 .sidebar {
   width: 80px;
   background-color: var(--box-gray);
