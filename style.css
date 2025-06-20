@@ -1,40 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* outline: 3px solid blueviolet; */
 }
+
 :root {
   --open-sans-font: "Poppins", sans-serif;
   --space-mono-font: "Space Mono", monospace;
   --inter-font: "Inter", sans-serif;
-
   --main-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   --man-text-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
   --gray-text: rgb(161, 161, 161);
   --box-gray: rgb(45, 47, 51);
-
   --nav-icon-bg: rgb(255, 255, 255);
 }
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: 
-*/
 
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #121212;
   background-image: radial-gradient(#444 1px, transparent 1px);
-  background-size: 30px 30px;
-  /* spacing between dots */
+  background-size: 30px 30px; /* spacing between dots */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +33,7 @@ body {
   color: white;
   animation: moveBg 200s linear infinite;
 }
+
 @keyframes moveBg {
   0% {
     background-position: 0% 0%;
@@ -87,30 +79,29 @@ body {
   width: 24px;
   height: 24px;
 }
+
 main {
   width: 95%;
   max-width: 650px;
   margin-top: 100px;
 }
-@media (width <= 685px) {
-  main {
-    margin-top: 20px;
-  }
-}
+
 .container1 {
   display: flex;
   flex-direction: column;
   gap: 30px;
   border-bottom: var(--gray-text) solid 2px;
 }
+
 .status {
   display: flex;
   align-items: center;
   font-weight: bold;
 }
+
 .name-title {
   font-size: 1.8rem;
-  font-size: clamp(1.8rem, 1.3599999999999999rem + 2.2vw, 4rem);
+  font-size: clamp(1.8rem, 1.36rem + 2.2vw, 4rem);
   white-space: nowrap;
   font-weight: bold;
   line-height: 4.5rem;
@@ -126,6 +117,7 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .social-media-link {
   display: flex;
   flex-wrap: nowrap;
@@ -147,13 +139,13 @@ main {
   width: 95%;
   max-width: 150px;
   background-color: var(--box-gray);
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   box-shadow: var(--main-box-shadow);
   transition: ease-in-out 0.3s;
   flex-wrap: nowrap;
   font-size: 0.8rem;
-  font-size: clamp(0.8rem, 0.76rem + 0.19999999999999996vw, 1rem);
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
 }
 @media (width <= 375px) {
   .social-media-link .box-link {
@@ -167,14 +159,16 @@ main {
   transition: ease-in-out 0.3s;
   color: black;
 }
+
 .about-me {
   margin: 5px;
   font-size: 1rem;
-  font-size: clamp(1rem, 0.92rem + 0.3999999999999999vw, 1.4rem);
+  font-size: clamp(1rem, 0.92rem + 0.4vw, 1.4rem);
   padding-bottom: 20px;
   color: var(--gray-text);
   text-shadow: var(--main-text-shadow);
 }
+
 .timeline-section {
   padding: 5px;
   margin-top: 20px;
@@ -224,6 +218,7 @@ main {
   color: #4da6ff;
   text-decoration: none;
 }
+
 .projects {
   padding-inline: 5px;
   padding-block: 30px;
@@ -274,6 +269,7 @@ main {
 .projects .container-pro .projects-box .projects-icons img {
   height: 100%;
 }
+
 .skills {
   padding-inline: 5px;
   padding-block: 30px;
@@ -324,6 +320,7 @@ main {
 .skills .container-skills .skills-box p {
   font-weight: bold;
 }
+
 .uses {
   padding-inline: 5px;
   padding-block: 30px;
@@ -374,6 +371,7 @@ main {
 .uses .container-skills .skills-box p {
   font-weight: bold;
 }
+
 footer {
   display: flex;
   flex-direction: column;
@@ -398,6 +396,7 @@ footer a {
   height: 45px;
   border-radius: 20px;
   background-color: var(--box-gray);
+  width: -moz-max-content;
   width: max-content;
   display: flex;
   justify-content: center;
@@ -406,4 +405,4 @@ footer a {
   color: white;
   padding: 15px;
   white-space: nowrap;
-}
+}/*# sourceMappingURL=style.css.map */
